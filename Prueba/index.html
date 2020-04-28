@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PaginaWeb</title>
+	<script languaje="JavaScript">
+	function saludo(){
+		var tiempo= new Date()
+		var hora= tiempo.getHours()
+		var hola="¡Saludos, vigilante de la Noche!"
+		if (hora>5){
+			hola="¡Feliz mañana!"
+		}
+		if (hora>12){
+			hola="¡Buenos días!"
+		}
+		if (hora>16){
+			hola="¡Buenas tardes!"
+		}
+		if (hora>22){
+			hola="¡Buenas noches!"
+		}
+		document.write(hola);	
+	}
+	</script>
+<style>
+	body{
+		background-image: url("Background.jpg");
+		margin: 0px;
+		margin-left: 10%;
+		margin-right: 10px;
+		font-family: Arial;
+		
+	}
+</style>
+<link href="ToolBar.css" rel="stylesheet" type="text/css">
+<link href="Footer.css" rel="stylesheet" type="text/css">
+<link href="Contenido.css" rel="stylesheet" type="text/css">
+<link href="Contenedores.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="fonts.css">
+</head>
+
+<body id="alinear">
+	<nav id="contenedor" >
+		<div id= "toolbar">
+			<ul>
+				<li><a href="#"><div class="centrado" style="overflow: hidden;">INICIO</div></a></li>
+				<li><a href="#"><div class="centrado" style="overflow: hidden;">CONSOLAS</div></a></li>
+				<li><a href="#"><div class="centrado" style="overflow: hidden;">MERCHANDISING</div></a></li>
+				<li><a href="#"><div class="centrado" style="overflow: hidden;">NOTICIAS</div></a></li>
+			</ul>
+		</div>
+		<div id="contenido">
+			<div id="cuerpo"> 
+					<script>
+						saludo();
+					</script>
+				
+				<div class="slides">
+            		<div>
+               	 		<img src="img/1.jpg" alt="">
+            		</div>
+            		<div>
+                		<img src="img/2.jpg" alt="">
+            		</div>
+            		<div>
+                		<img src="img/3.jpg" alt="">
+            		</div>
+            		<div>
+                		<img src="img/4.jpg" alt="">
+            		</div>
+
+        		</div>
+				
+			</div>
+			<script src="http://code.jquery.com/jquery-1.9.1.min.js"> </script>
+    		<script src="js/jquery.slides.js"></script>
+    		<script>
+
+    $(function(){
+        $(".slides").slidesjs({
+            play: {
+                active:true,//genera el botón play/stop
+                effect:"slide",//efecto slide
+                interval: 3000,//intervalo de tiempo en milisegundos
+                auto:true,//empieza a funcionar automáticamente
+                swap:true,//muestra el botón play/stop
+                pauseOnHover:false,
+                restartDelay: 2500
+        }
+     });
+    });
+
+
+    </script>
+
+		</div>
+		<footer id="footerGeneral">
+			<div id= "footerArriba" class="centrado"> <!-- Esto es un comentario -->
+				<table id= "tabla">
+					<td id="copyRight" > 
+							<p> Copyright © 2020 GMNG <br> Todos los derechos reservados</p>
+					</td>
+					<td id="redesSociales">
+						<ul>
+							<div  class="centrado" style=" align-items: center;width: 33.33%; height: 100%; float:left; "><li>
+								 <a><div class="escalado" ><img src="twiter.svg" alt="No disponible" ></div></a>
+							</li></div>
+							<div class="centrado" style=" align-items: center;width: 33.33%; height: 100%;float:left;"><li>
+								<a><div class="escalado" ><img  src="facebook.svg" alt="No disponible"></div></a>
+							</li></div>
+							<div class="centrado" style="align-items: center;width: 33.34%; height: 100%;float:left; "><li>
+								<a><div class="escalado" ><img  src="instagram.svg" alt="No disponible"></div></a>
+							</li></div>
+						</ul>
+					</td>
+					<td id="responsive" > 
+						<p>Todas las marcas son propiedad de <br>sus respectivos fabricantes.
+						Todos los impuestos incluidos.</p>
+					</td>
+				</table>
+			</div>
+			<div id= "footerAbajo">
+				<table id="centrarTexto">
+					<td> 
+							<p> Trabajo URJC Multimedia</p>
+					</td>
+				</table>
+			</div>
+		</footer>
+	</nav>
+	
+
+</body>	
+</html>
